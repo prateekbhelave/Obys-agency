@@ -54,3 +54,10 @@ h2 {
         opacity: 0;
     }
 }
+
+
+.main-text span:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 200;
+}
