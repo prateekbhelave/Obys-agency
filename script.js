@@ -29,16 +29,15 @@ function LoaderAnimation(){
     tl.to("#loader", {
       opacity: 0,
       duration: 0.2,
+      display: "none",
       delay: 2,
     });
     tl.from("#page1", {
       delay:0.1,
-      y: 800,
+      // y: 100,
       duration: 0.4,
     });
-    tl.to("#loader", {
-      display: "none",
-    });
+   
     tl.from("#nav", {
       opacity: 0,
     });
@@ -55,15 +54,24 @@ function cursorAnimation(){
       left: dets.x,
       top: dets.y,
     });
+    // gsap.to(".video-cursor", {
+    //   right: dets.x,
+    //   top: dets.y,
+    // });
   });
 
   Shery.makeMagnet("#nav-part2 h4", {
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1,
   });
-  Shery.makeMagnet("#nav svg", {
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    duration: 1,
+  
+  Shery.makeMagnet("", {
+    // ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    // duration: 1,
   });
 }
 cursorAnimation()
+Shery.makeMagnet("svg", {
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 1,
+});

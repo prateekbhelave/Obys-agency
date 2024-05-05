@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
       rel="shortcut icon"
       href="./favicon_io/favicon.ico"
       type="image/x-icon"
@@ -13,14 +17,16 @@
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div
       id="cursor"
       class="fixed w-10 h-10 rounded-full bg-[transparent] border mix-blend-difference -translate-x-2/4 -translate-y-2/4 z-10"
     ></div>
+
     <!-- <div
       id="loader"
-      class="w-screen h-screen fixed z-9 bg-[#0b0b0b] px-[15vh] py-[20vh]"
+      class="w-screen h-[100vh] fixed z-50 bg-[#0b0b0b] px-[15vh] py-[20vh]"
     >
       <div
         class="loading-text gap-8 flex items-center flex-start h-fit overflow-hidden"
@@ -45,76 +51,294 @@
     </div> -->
 
     <!-- Main -->
-    <div id="main" class="z-50 relavtive bg-[#030303]">
+    <div id="main" class="z-10 relavtive overflow-hidden bg-[#030303]">
       <!-- Page 1 -->
-      <div id="page1" class="h-screen bg-[#151515]">
-        <!-- Nav bar -->
+      <!-- <div id="page1" class="h-[95vh] bg-[#151515]">
+        //Nav bar
         <div
           id="nav"
-          class="flex items-center justify-between py-[3.7vw] px-[8.5vw]"
+          class="flex items-center justify-between w-screen /*px-[5vw] py-[2.3vw]*/"
         >
-          <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
-            <path
-              d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M65.7937 8.96329C65.7937 8.04398 66.4826 7.35449 67.4012 7.35449C68.3198 7.35449 69.0087 8.04398 69.0087 8.96329C69.0087 9.88261 68.3198 10.5721 67.4012 10.5721C66.4826 10.5721 65.7937 9.88261 65.7937 8.96329Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M59.019 18.3861C59.019 17.4668 59.708 16.7773 60.6266 16.7773C61.5451 16.7773 62.2341 17.4668 62.2341 18.3861C62.2341 19.3055 61.5451 19.9949 60.6266 19.9949C59.8228 19.9949 59.019 19.3055 59.019 18.3861Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M41.3365 9.88276C40.5327 8.27396 39.6142 7.8143 39.04 7.58447H46.3887C45.9294 7.8143 45.0108 8.04413 45.0108 8.96344C45.0108 9.19327 45.1257 9.65293 45.3553 10.1126L48.3407 16.6627L46.5035 20.225L41.3365 9.88276Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M51.8998 9.30819C51.8998 8.04413 50.9812 7.69939 50.2922 7.58447H54.6555C53.8517 7.8143 52.8183 8.27396 51.7849 10.1126C51.8998 9.88276 51.8998 9.65293 51.8998 9.30819Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M66.7122 17.9266C66.7122 16.2029 65.2195 15.6283 63.0378 14.5941C60.8562 13.5599 59.019 12.7555 59.019 10.8019C59.019 8.73348 60.971 7.12468 64.1861 7.00977C63.1527 7.23959 62.3489 8.15891 62.3489 9.42296C62.3489 10.9168 63.612 11.4914 65.9084 12.5256C68.2049 13.5599 70.2717 14.4792 70.2717 16.6626C70.2717 19.1907 67.4011 20.3398 64.6454 20.4547C65.9084 20.2249 66.7122 19.1907 66.7122 17.9266Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M21.0129 2.64303C21.0129 1.6088 20.3239 0.919313 19.2905 0.689485L24.4576 0V20.3398C24.4576 20.3398 22.6204 20.4547 20.8981 21.8337V2.64303H21.0129Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M34.6764 14.0195C34.6764 10.4572 31.691 7.58432 27.9019 7.35449C30.1983 7.69923 30.8873 11.4914 30.8873 14.0195C30.8873 16.5476 30.1983 20.2249 27.9019 20.6845C31.8058 20.4547 34.6764 17.5819 34.6764 14.0195Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M14.9269 14.0195C14.9269 10.4572 11.9415 7.58432 8.15234 7.35449C10.4488 7.69923 11.1377 11.4914 11.1377 14.0195C11.1377 16.5476 10.4488 20.2249 8.15234 20.6845C11.9415 20.4547 14.9269 17.5819 14.9269 14.0195Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M0 14.0195C0 10.4572 2.9854 7.58432 6.77456 7.35449C4.4781 7.69923 3.78916 11.4914 3.78916 14.0195C3.78916 16.5476 4.4781 20.2249 6.77456 20.6845C2.9854 20.4547 0 17.5819 0 14.0195Z"
-              fill="currentColor"
-            ></path>
-          </svg>
+          <div
+            id="nav-part1"
+            class="flex justify-between w-fit items-center px-[4.8vw] py-[2vw]"
+          >
+            <svg
+              id="square_menu"
+              class="menu-opener__square mr-[2.5rem]"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <rect y="10" width="2" height="2" fill="currentColor"></rect>
+              <rect y="5" width="2" height="2" fill="currentColor"></rect>
+              <rect width="2" height="2" fill="currentColor"></rect>
+              <rect
+                x="5"
+                y="10"
+                width="2"
+                height="2"
+                fill="currentColor"
+              ></rect>
+              <rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>
+              <rect x="5" width="2" height="2" fill="currentColor"></rect>
+              <rect
+                x="10"
+                y="10"
+                width="2"
+                height="2"
+                fill="currentColor"
+              ></rect>
+              <rect
+                x="10"
+                y="5"
+                width="2"
+                height="2"
+                fill="currentColor"
+              ></rect>
+              <rect x="10" width="2" height="2" fill="currentColor"></rect>
+            </svg>
+            <svg
+              class="brand__svg lg:mr-[12vw]"
+              width="71"
+              height="27"
+              viewBox="0 0 71 27"
+            >
+              <path
+                d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M65.7937 8.96329C65.7937 8.04398 66.4826 7.35449 67.4012 7.35449C68.3198 7.35449 69.0087 8.04398 69.0087 8.96329C69.0087 9.88261 68.3198 10.5721 67.4012 10.5721C66.4826 10.5721 65.7937 9.88261 65.7937 8.96329Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M59.019 18.3861C59.019 17.4668 59.708 16.7773 60.6266 16.7773C61.5451 16.7773 62.2341 17.4668 62.2341 18.3861C62.2341 19.3055 61.5451 19.9949 60.6266 19.9949C59.8228 19.9949 59.019 19.3055 59.019 18.3861Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M41.3365 9.88276C40.5327 8.27396 39.6142 7.8143 39.04 7.58447H46.3887C45.9294 7.8143 45.0108 8.04413 45.0108 8.96344C45.0108 9.19327 45.1257 9.65293 45.3553 10.1126L48.3407 16.6627L46.5035 20.225L41.3365 9.88276Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M51.8998 9.30819C51.8998 8.04413 50.9812 7.69939 50.2922 7.58447H54.6555C53.8517 7.8143 52.8183 8.27396 51.7849 10.1126C51.8998 9.88276 51.8998 9.65293 51.8998 9.30819Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M66.7122 17.9266C66.7122 16.2029 65.2195 15.6283 63.0378 14.5941C60.8562 13.5599 59.019 12.7555 59.019 10.8019C59.019 8.73348 60.971 7.12468 64.1861 7.00977C63.1527 7.23959 62.3489 8.15891 62.3489 9.42296C62.3489 10.9168 63.612 11.4914 65.9084 12.5256C68.2049 13.5599 70.2717 14.4792 70.2717 16.6626C70.2717 19.1907 67.4011 20.3398 64.6454 20.4547C65.9084 20.2249 66.7122 19.1907 66.7122 17.9266Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M21.0129 2.64303C21.0129 1.6088 20.3239 0.919313 19.2905 0.689485L24.4576 0V20.3398C24.4576 20.3398 22.6204 20.4547 20.8981 21.8337V2.64303H21.0129Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M34.6764 14.0195C34.6764 10.4572 31.691 7.58432 27.9019 7.35449C30.1983 7.69923 30.8873 11.4914 30.8873 14.0195C30.8873 16.5476 30.1983 20.2249 27.9019 20.6845C31.8058 20.4547 34.6764 17.5819 34.6764 14.0195Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M14.9269 14.0195C14.9269 10.4572 11.9415 7.58432 8.15234 7.35449C10.4488 7.69923 11.1377 11.4914 11.1377 14.0195C11.1377 16.5476 10.4488 20.2249 8.15234 20.6845C11.9415 20.4547 14.9269 17.5819 14.9269 14.0195Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M0 14.0195C0 10.4572 2.9854 7.58432 6.77456 7.35449C4.4781 7.69923 3.78916 11.4914 3.78916 14.0195C3.78916 16.5476 4.4781 20.2249 6.77456 20.6845C2.9854 20.4547 0 17.5819 0 14.0195Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <div
+              id="part1-right"
+              class="hidden lg:mt-[1.4rem] lg:ml-[1.1rem] lg:block text-sm leading-4 font-medium tracking-wider"
+            >
+              <p>Obys—<br />Creative<br />Design<br />Agency<br /></p>
+            </div>
+          </div>
+
           <div
             id="nav-part2"
-            class="flex items-center justify-between gap-[2.5vw] -mx-10"
+            class="flex items-center justify-between gap-[2.8vw] px-[4.7vw] lg:-mt-[1.2rem]"
           >
             <h4 class="text-[1.1vw] font-medium">Works</h4>
             <h4 class="text-[1.1vw] font-medium">About</h4>
-            <h4 class="text-[1.1vw] font-medium">Contact</h4>
+            <h4 class="text-[1.1vw] font-medium">Contacts</h4>
           </div>
         </div>
         <div
           id="main-hading"
-          class="overflow-hidden mt-[5.8vw] flex items-center h-fit justify-center"
+          class="overflow-hidden mt-[5vw] flex items-center h-fit justify-center"
         >
           <div
-            class="main-text text-[7.2vw] px-6 leading-[7.4vw] w-[50%] font-semibold tracking-wider h-fit overflow-hidden"
+            class="main-text text-[7.5vw] px-[12vw] leading-[7.1vw] w-[70%] font-semibold tracking-wide h-fit overflow-hidden relative"
           >
+            <h1 class="main-text number absolute left-20 -top-4 text-[3.2vw]">01</h1>
             <h1 class="main-text">WE DESIGN</h1>
             <h1 class="main-text">UNIQUE</h1>
-            <h1 class="main-text"><span class="">WEB</span>/<span>GRAPHIC</span></h1>
+            <h1 class="main-text flex">
+              <span class="border-b-8 pb-2">WEB </span>
+              <span class="pl-1 -mr-2">/ </span>
+              <span class="border-b-8 pb-2">GRAPHIC</span>
+            </h1>
             <h1 class="main-text">EXPERIENCE</h1>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Page 2 -->
+      <!-- <div id="page2" class="w-full h-screen bg-[#151515] relative">
+        <div
+          class="video-container w-[70vw] h-[65vh] relative top-[20%] left-[29%]"
+        >
+          <div
+            class="video-cursor bg-[#FFA63D] h-[30%] w-[14%] absolute -top-[10%] right-1/2 z-10 rounded-full flex items-center justify-center"
+          >
+            <i class="ri-play-mini-fill text-3xl"></i>
+          </div>
+          <img
+            class="absolute h-full w-full object-cover"
+            src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg"
+            alt=""
+          />
+          <video
+            class="w-full h-full object-cover"
+            src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"
+            muted
+            loop
+            autoplay
+          ></video>
+        </div>
+      </div> -->
+
+      <!-- Page 3 -->
+      <!-- <div class="page3 min-h-[100vh] w-full bg-[#535353] relative"></div> -->
+
+      <!-- Page 4 -->
+      <!-- <div class="page4 min-h-[100vh] w-full bg-[#151515] relative">
+        <div class="page4-content w-[70vw] ml-[27%] ">
+          <h1 class="text-[7.5vw] uppercase font-semibold">About Obys</h1>
+          <div class="underline h-[.1rem] w-[100%] bg-white"></div>
+          <h1 class="w-[55%] text-[2rem] font-[500] pt-12 pb-12 leading-10">
+            Our agency is about people who love creating, designing and
+            developing wow projects. In the same time we are a boutique agency
+            that is more than the collective. We learn and grow, win and
+            celebrate together.
+          </h1>
+          <div class="team-content flex">
+            <img
+              class="w-2/4"
+              src="https://obys.agency/wp-content/uploads/2020/07/content-image01.jpg"
+              alt=""
+            />
+            <p class="pl-8 w-1/3 inline-block text-[.95rem]">
+              We are happy to present our new website and updated version of
+              Obys agency. As before we are open for new projects worldwide!
+              <br />
+              <br />Would you like to have award winning site or unique branding
+              style, please say hi to our manager —info@obys.agency. And we will
+              help you with the pleasure.
+            </p>
+          </div>
+          <div
+            class="achievements relative bottom-[20vh] left-[25vw] bg-[#3F7DF4] w-[60%] h-[60%] py-16 px-10"
+          >
+            <div class="w-full flex justify-center items-center border-b pb-2">
+              <div class="p-4 flex w-1/2 justify-between gap-10 items-center">
+                <h1 class="text-2xl">Awwwards x16</h1>
+              </div>
+              <div class="w-1/2">
+                <h2 class="text-sm">SOTM, SOTD and Honrable Mentions</h2>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-center items-center border-b py-2">
+              <div class="p-4 flex w-1/2 justify-between gap-10 items-center">
+                <h1 class="text-2xl">Red Dot Award x1</h1>
+              </div>
+              <div class="w-1/2">
+                <h2 class="text-sm">Best of the Best</h2>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-center items-center border-b py-2">
+              <div class="p-4 flex w-1/2 justify-between gap-10 items-center">
+                <h1 class="text-2xl">FWA x11</h1>
+              </div>
+              <div class="w-1/2">
+                <h2 class="text-sm">FWA of The Day</h2>
+              </div>
+            </div>
+            <div class="w-full flex justify-center items-center border-b py-2">
+              <div class="p-4 flex w-1/2 justify-between gap-10 items-center">
+                <h1 class="text-2xl">CSSDA x23</h1>
+              </div>
+              <div class="w-1/2">
+                <h2 class="text-sm">WOTM, WOTD and UI, UX, Innovation</h2>
+              </div>
+            </div>
+            <div class="w-full flex justify-center items-center border-b py-2">
+              <div class="p-4 flex w-1/2 justify-between gap-10 items-center">
+                <h1 class="text-2xl">Behance x25</h1>
+              </div>
+              <div class="w-1/2">
+                <h2 class="text-sm">Interaction, Graphic Design</h2>
+              </div>
+            </div>
+          </div>
+          <div class="underline h-[.1rem] w-[100%] bg-white"></div>
+          <p class="mt-6">We work with</p>
+        </div>
+      </div> -->
+
+      <!-- Page 5 -->
+      <!-- this animation css is in the style.css file -->
+      <div class="page5 min-h-[100vh] w-full bg-[#151515] relative">
+        <!-- <div class="elem uppercase ">
+          <h1> <span>Sport</span> - Technology - Fashion - </h1>
+          <h1> <span>Sport</span> - Technology - Fashion - </h1>
+        </div>
+        <div class="elem2 uppercase ">
+          <h1> <span>Beauty</span> - Real state - Architecture - </h1>
+          <h1> <span>Beauty</span> - Real state - Architecture - </h1>
+        </div>
+        <div class="elem uppercase ">
+          <h1> <span>Science</span> - Travel - Partner - </h1>
+          <h1> <span>Science</span> - Travel - Partner - </h1>
+        </div>
+        <div class="elem2 uppercase ">
+          <h1> <span>Music</span> - Automotive - Hotels - </h1>
+          <h1> <span>Music</span> - Automotive - Hotels - </h1>
+        </div> -->
+      </div>
+
+      <!-- Footer -->
+      <div class="footer min-h-[80vh] w-full bg-[#151515] relative">
+        <div class="footer-div h-full w-[73%] relative left-[27vw]">
+          <div class="footer-heading">
+            <h1 class="number absolute -left-24 top-6 text-[3.5vw]">04</h1>
+            <h1 class="text-[7vw] font-semibold tracking-wide">LET'S CREATE</h1>
+            <div class="underline h-[.1rem] w-[100%] bg-white"></div>
+          </div>
+          <div class="footer-links flex justify-around pb-[5vw]">
+            <div class="box w-[33%]">
+              <h6>Socials</h6>
+              <h4>Diribbble</h4>
+              <h4>Behance</h4>
+              <h4>Instagram</h4>
+              <h4>Facebook</h4>
+              <h4>twitter</h4>
+              <h4>YouTube</h4>
+            </div>
+            <div class="box w-[33%]">
+              <h6>Address</h6>
+              <h4 class="w-[55%]">Skovorody 5 61057 Kharkiv Ukraine</h4>
+            </div>
+            <div class="box w-[33%]">
+              <h6>Say Hi!</h6>
+              <h4 class="underline">info@obys.agency</h4>
+            </div>
+          </div>
+            <div class="underline h-[.1rem] w-[100%] bg-white"></div>
+          <div class="copyright py-[3vw]">
+            <h1>Obys Agency © 2024</h1>
           </div>
         </div>
       </div>
@@ -136,6 +360,6 @@
       type="text/javascript"
       src="https://unpkg.com/sheryjs/dist/Shery.js"
     ></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
   </body>
 </html>

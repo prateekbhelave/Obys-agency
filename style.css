@@ -13,7 +13,7 @@ body {
 
 }
 
-h2 {
+#loader h2 {
     opacity: 0;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -60,4 +60,75 @@ h2 {
     -webkit-text-stroke: 1px #fff;
     color: transparent;
     font-weight: 200;
+    transition: .4s ease-in-out;
+    border: none;
+}
+
+.page5 .elem , .elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+        margin-bottom: -50px;
+}
+
+.page5 .elem h1{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 300;
+    font-size: 8vw;
+    margin-right: 15px;
+    display: inline-block;
+    animation-name: marqueAnime;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes marqueAnime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 15px));
+    }
+}
+
+
+.page5 .elem2 {
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.page5 .elem2 h1 {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 300;
+    font-size: 8vw;
+    margin-right: 15px;
+    display: inline-block;
+    transform: translateX(-100%);
+    animation-name: marqueAnime;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.elem span , .elem2 span{
+    font-style: italic;
+    font-family: "silk serif";
+    color: transparent;
+}
+
+.number{
+    font-family: "silk serif";
+}
+
+.footer-links .box h6{
+    /* font-size: 2vw; */
+    padding: 2.4vw 0;
+}
+
+.footer-links .box h4{
+    font-size: 1.9vw;
+    line-height: 27px;
 }
